@@ -285,6 +285,10 @@
      -->
    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
 
+   <!-- Boston College Specific field definitions 
+   -->
+   <field name="mods_titleInfo_primary_title_ms" type="string" indexed="true" stored="true"/>
+
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
         will be used if the name matches any of the patterns.
         RESTRICTION: the glob-like pattern in the name attribute must have
@@ -307,7 +311,7 @@
    <dynamicField name="*_f"  type="sfloat"  indexed="true"  stored="true"/>
    <dynamicField name="*_d"  type="sdouble" indexed="true"  stored="true"/>
    <dynamicField name="*_dt" type="date"    indexed="true"  stored="true"/>
-   <dynamicField name="*_mdt" type="date"    indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_mdt" type="date"    indexed="true"  stored="true"/>
    <dynamicField name="*_et" type="edgedText" indexed="true" stored="true" multiValued="true"/>
    <dynamicField name="*_mlt" type="mappedLowerText" indexed="true" stored="true" multiValued='false'/>
    <!-- uncomment the following to ignore any fields that don't already match an existing
